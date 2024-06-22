@@ -1,0 +1,38 @@
+<section class="homepage">
+  <app-banner
+    src="assets/imagens/banner-homepage.png"
+    alt="Banner da aplicação Jornada"
+  ></app-banner>
+  <app-container>
+    <app-form-busca></app-form-busca>
+    <h2>Promoções</h2>
+    <div class="card-wrapper">
+      <mat-card class="card-busca" *ngFor="let items of promotions">
+        <img
+          mat-card-image
+          src="{{ items.imagem }}"
+          alt="Imagem de Veneza"
+        />
+        <mat-card-content>
+          <ul>
+            <li>{{ items.destino }}</li>
+            <li>R$ {{ items.preco }}</li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-flat-button color="primary">VER DETALHES</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <h2>Depoimentos</h2>
+    <div class="card-wrapper">
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+      <app-card-depoimento></app-card-depoimento>
+    </div>
+  </app-container>
+  <app-banner
+    src="assets/imagens/banner-homepage-rodape.png"
+    alt="Banner da aplicação Jornada"
+  ></app-banner>
+</section>
