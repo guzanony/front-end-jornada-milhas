@@ -10,3 +10,10 @@ export interface States {
   nome: string;
   sigla: string;
 }
+
+export interface Depoimentos {
+  id: number;
+  texto: string;
+  autor: string;
+  avatar: string;
+}

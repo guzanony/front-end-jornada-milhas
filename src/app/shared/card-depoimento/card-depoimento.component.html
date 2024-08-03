@@ -1,10 +1,10 @@
 <mat-card class="depoimento">
-  <mat-card-content>
+  <mat-card-content  *ngFor="let card of depoimentos">
     <img src="assets/imagens/avatar3.png" alt="Avatar da pessoa autora do depoimento">
     <ul>
-      <li>{{ depoimento }}</li>
+      <li>{{card.texto}}</li>
       <li>
-        <strong>{{ autoria }}</strong>
+        <strong>{{card.autor}}</strong>
       </li>
     </ul>
   </mat-card-content>
